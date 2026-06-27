@@ -1,4 +1,5 @@
 import 'package:first_app/components/MyButton.dart';
+import 'package:first_app/pages/99_BlankPage.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -86,6 +87,15 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 MyButton(),
+                ElevatedButton(
+                  child: Text('Go'),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => BlankPage()),
+                    );
+                  },
+                ),
+
                 MyButton(),
                 ElevatedButton(
                   onPressed: () {
